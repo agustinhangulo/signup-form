@@ -1,0 +1,153 @@
+@font-face {
+    font-family: Norse;
+    src: url(media/Norse-Bold.otf);
+}
+
+:root {
+    --green: #596D48;
+    --dark-green: #3d522d;
+    --left-space: 60px;
+
+}
+
+body{
+    display: flex;
+    margin: 0;
+
+    font-family: Arial, Helvetica, sans-serif;
+    color: #282828;
+
+}
+
+/* Left side styling */
+
+#left {
+    height: 100vh;
+    min-width: 400px;
+    width: clamp(400px, 50% , 1000px);
+    margin: 0;
+    
+    background-image: url(media/halie-west-25xggax4bSA-unsplash.jpg);
+    background-size: cover;
+}
+
+#logo {
+    height: 220px;
+}
+
+#banner {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+
+    position: relative;
+    top: max(100px, 25%);
+
+    font-size: 64px;
+    color: white;
+    font-family: Norse, 'Times New Roman', Times, serif;
+    background-color: rgb(0, 0, 0, 0.5);
+}
+
+/* Right side styling */
+
+#right {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+form {
+    height: 30%;
+    /* Padding in form creates larger width than necessary */
+    width: calc(100% - 2*var(--left-space));  
+    
+    padding: 40px var(--left-space) 40px var(--left-space);
+    margin-top: 40px;
+    margin-bottom: 40px;
+
+    font-variant: small-caps;
+
+    box-shadow: 5px 0 5px 3px lightgray;
+
+}
+
+#form-container {
+    display: flex;
+    gap: 100px;
+}
+
+.col {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+input {
+    min-width: 250px;
+    
+    margin-bottom: 20px;
+    border: 2px solid #E5E7EB;
+
+    font-size: 18px;
+}
+
+legend {
+    padding: 0;
+    margin: 0 0 20px 0;
+    
+
+    font-size: 24px;
+    font-weight: bold;
+    font-variant: normal;
+}
+
+p {
+    font-size: 20px;
+    font-weight: bold;
+
+    margin-bottom: 0px;  /* Fixes space between paragraph and form */
+
+    padding-left: var(--left-space);
+    padding-right: var(--left-space);
+    
+
+    max-width: 1000px;
+}
+
+.bold {
+    font-size: 24px;
+    font-weight: bold;
+}
+
+a {
+    color: var(--green);
+    text-decoration: none;
+}
+
+a:hover {
+    color: var(--dark-green)
+}
+
+button {
+
+
+    padding: 20px;
+    margin-left: var(--left-space);
+    width: 250px;
+
+    color: white;
+    font-size: 20px;
+    font-weight: bold;
+
+    border: 0px;
+    border-radius: 10px;
+
+    background-color: var(--green);
+
+}
+
+button:hover {
+    background-color: var(--dark-green);
+}
